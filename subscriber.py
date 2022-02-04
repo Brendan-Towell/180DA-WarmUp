@@ -20,7 +20,7 @@ def on_message(client, userdata, message):
     startIndex = str(message.payload).find('\'')
     endIndex = str(message.payload).find('\'', startIndex + 1)
     count = int(str(message.payload)[startIndex + 1:endIndex]) + 1
-    time.sleep(3)
+    #time.sleep(3)
     client.publish(client_topic, str(count), qos=1)
 
 
